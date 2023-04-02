@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+
+html{
+    font-size: 17px;
+}
+
+.visibility-toggle{
+    visibility: hidden;
+}
+
+
+.library-container{
+    background-color: #474A2C;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 159px;
+    padding: 10px;
+}
+
+.book-container{
+    padding: 25px 20px 10px;
+    position: relative;
+    margin: 10px;
+    background-color: #59A96A;
+    min-height: 150px;
+    min-width: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 3px 3px 2px 2px #636940;
+}
+
+.book-container > * {
+    text-align: center;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+.book-title{
+    font-size: 1.5rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    top: 3px;
+}
+
+.book-button{
+    border-radius: 20px;
+    background: transparent;
+    border: solid transparent;
+}
+
+.book-button:hover{
+    border: revert;
+}
