@@ -3,6 +3,7 @@ let defaultBook = new Book("Default Book", "George R. R. Martin", 694, false)
 myLibrary.push(defaultBook)
 
 
+let overlayElement = document.querySelector(".overlay")
 let newBookButton = document.querySelector(".new-book-button")
 let newBookForm = document.querySelector('.new-book-form')
 let submitButton = document.querySelector('.submit-button')
@@ -36,6 +37,7 @@ function handleBookButtonClick(e){
     let reviewNode = e.target;
     
     while (reviewNode.tagName !== 'BUTTON') {
+        if(reviewNode.tagName === 'BODY'){return}
         reviewNode = reviewNode.parentNode;
     }
     
@@ -66,6 +68,9 @@ function handleDeleteButton(reviewNode){
 
 function toggleNewBookForm(e){
     newBookForm.classList.toggle('visibility-toggle')
+    newBookForm.classList.toggle('z-index-2')
+    overlayElement.classList.toggle('visibility-toggle')
+    overlayElement.classList.toggle('z-index-1')
 }
 
 function removeAllChildNodes(parent) {
