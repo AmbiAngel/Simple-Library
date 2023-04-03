@@ -11,7 +11,7 @@ html{
     font-size: 17px;
 }
 
-.visibility-toggle{
+.is-not-visible{
     visibility: hidden;
 }
 
@@ -82,7 +82,7 @@ html{
     z-index: 2;
 }
 
-.new-book-form {
+.new-book-form, .edit-book-form {
     position: fixed;
     background: lightgray;
     display: flex;

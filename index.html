@@ -12,7 +12,7 @@
         <button class="new-book-button">+ ADD BOOK</button>
     </div>
 
-    <form class="visibility-toggle new-book-form" action="" method="post">
+    <form class="is-not-visible new-book-form" action="" method="post">
         <div class="input-containers">
             <label for="title">Title</label>
             <input type="text" class="title" required>
@@ -33,11 +33,35 @@
             <input type="checkbox" class="read-check">
         </div>
 
-        <button class="submit-button" type="submit">Submit</button>
+        <button class="submit-button" type="submit">Submit New Book</button>
+    </form>
+
+    <form class="is-not-visible edit-book-form" action="" method="post">
+        <div class="input-containers">
+            <label for="title">Title</label>
+            <input type="text" class="title" required>
+        </div>
+
+        <div class="input-containers">
+            <label for="author">Author</label>
+            <input type="text" class="author" required>
+        </div>
+
+        <div class="input-containers">
+            <label for="num-pages">Number of Pages</label>
+            <input type="number" class="num-of-pages" required>
+        </div>
+
+        <div class="input-containers">
+            <label for="read">Read?</label>
+            <input type="checkbox" class="read-check">
+        </div>
+
+        <button class="submit-button" type="submit">Submit Edit</button>
     </form>
 
 
-    <div class="visibility-toggle overlay"></div>
+    <div class="is-not-visible overlay"></div>
 
     <div class="library-container"></div>
     <script src="app.js"></script>
