@@ -1,6 +1,18 @@
 let myLibrary = [];
-let defaultBook = new Book("Default Book", "George R. R. Martin", 694, false)
-myLibrary.push(defaultBook)
+let defaultBooks = [{
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel Garcia Marquez",
+    "numOfPages": "321",
+    "readCheck": false
+},
+{
+    "title": "In Search of Lost Time",
+    "author": "Marcel Proust",
+    "numOfPages": "123",
+    "readCheck": false
+}
+]
+myLibrary.push(...defaultBooks)
 
 
 let overlayElement = document.querySelector(".overlay")
@@ -144,11 +156,19 @@ function displayBooks(){
 
         const titleElement = document.createElement('h2')
         titleElement.classList.add('book-title')
-        titleElement.textContent = bookObj.title
+        if (bookObj.title.length > 36){
+            truncatedTitle = `${bookObj.title.substring(0,33)}...`
+            titleElement.textContent = truncatedTitle
+        }
+        else titleElement.textContent = bookObj.title
         bookContainerElement.appendChild(titleElement)
 
         const authorElement = document.createElement('p')
-        authorElement.textContent = `by ${bookObj.author}`
+        if (bookObj.author.length > 25){
+            truncatedAuthor = `${bookObj.author.substring(0,22)}...`
+            authorElement.textContent = truncatedAuthor
+        }
+        else authorElement.textContent = bookObj.author
         bookContainerElement.appendChild(authorElement)
 
         const numOfPagesElement = document.createElement('p')
