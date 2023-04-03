@@ -26,6 +26,7 @@ const deleteButtonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" heig
 
 libraryContainer.addEventListener('click', handleBookButtonClick)
 newBookButton.addEventListener('click', toggleNewBookForm)
+overlayElement.addEventListener('click', toggleNewBookForm)
 newBookForm.addEventListener('submit', addBookToLibrary)
 
 
@@ -66,7 +67,7 @@ function handleDeleteButton(reviewNode){
     displayBooks()
 }
 
-function toggleNewBookForm(e){
+function toggleNewBookForm(){
     newBookForm.classList.toggle('visibility-toggle')
     newBookForm.classList.toggle('z-index-2')
     overlayElement.classList.toggle('visibility-toggle')
