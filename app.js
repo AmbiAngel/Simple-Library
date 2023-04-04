@@ -176,8 +176,15 @@ function displayBooks(){
         bookContainerElement.appendChild(numOfPagesElement)
 
         const readCheckElement = document.createElement('p')
-        if (bookObj.readCheck){ readCheckElement.textContent = 'Read'}
-        else{ readCheckElement.textContent = 'Not Read'}
+        if (bookObj.readCheck){ 
+            readCheckElement.textContent = 'Read'
+            readCheckElement.classList.add('read-check-true')
+        }
+        else{ 
+            readCheckElement.textContent = 'Not Read'
+            readCheckElement.classList.add('read-check-false')
+
+        }
         bookContainerElement.appendChild(readCheckElement)
 
       })

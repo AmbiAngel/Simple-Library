@@ -2,13 +2,14 @@
 
 *{
     font-family: 'Roboto', Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #DCD7C9;
 }
 body{
     margin: 0;
 }
 
 html{
-    font-size: 17px;
+
 }
 
 .is-not-visible{
@@ -17,11 +18,11 @@ html{
 
 
 .library-container{
-    background-color: #474A2C;
+    background-color: #1e262a;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    min-height: 159px;
+    min-height: 870px;
     padding: 10px;
 }
 
@@ -29,14 +30,15 @@ html{
     padding: 25px 20px 10px;
     position: relative;
     margin: 10px;
-    background-color: #59A96A;
+    background-color: #3F4E4F;
     height: 208px;
     width: 208px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 3px 3px 2px 2px #636940;
+    box-shadow: 3px 3px 2px 2px #161e24;
+    border-radius: 51px;
 }
 
 .book-container > * {
@@ -70,8 +72,9 @@ html{
 .overlay{
     width: 100%;
     height: 100%;
-    position: absolute;
-    background-color: #474a2c70;
+    position: fixed;
+    background-color: #000000ad;
+    top: 0px;
 }
 
 .z-index-1{
@@ -84,7 +87,7 @@ html{
 
 .new-book-form, .edit-book-form {
     position: fixed;
-    background: lightgray;
+    background: #3F4E4F;
     display: flex;
     flex-flow: column wrap;
     left: calc((100% - 20rem)/2);
@@ -101,15 +104,46 @@ html{
     justify-content: space-between;
 }
 
+.input-containers > input {
+    background: transparent;
+}
+
 .new-book-btn-div{
     display: flex;
     height: 70px;
     width: 100%;
+    background: #1e262a;
     align-items: center;
 }
 
-.new-book-button{
+.new-book-button, .submit-new-book-button, .edit-book-button{
     margin: 0 auto;
-    height: 50%;
+    height: 2.5rem;
+    width: 16.5rem;
+    background: #3F4E4F;
+    font-size: 1.2rem;
+    border-radius: 20px;
 }
 
+.read-check-true{
+    background-color: rgba(0, 128, 0, 0.466);
+    width: 50%;
+    border-radius: 20px;
+
+}
+
+.read-check-false{
+    background-color: rgba(255, 0, 0, 0.507);
+    width: 50%;
+    border-radius: 20px;
+}
+
+.title-div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    background: #2C3639;
+    align-items: center;
+    box-shadow: 1px 1px 10px 2px #000000;
+    position: relative;
+}
